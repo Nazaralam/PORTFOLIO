@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lightsaber</title>
+    <style>
+
+@font-face {
+            font-family: LeagueSpartan-Bold;
+            src: url(font/LeagueSpartan-Bold.otf);
+        }
+        
+        .body{
+            margin: 0;
+            width: 100vw;
+            height: 100vh;
+            background-color: black;
+        }
+
+        .span{
+            position: fixed;
+            top: 10px;
+            right: 10px;
+            margin: 10px;
+            color: white;
+        }
+
+    </style>
+</head>
+<body>
+    <a style="font-size:30px;font-family:LeagueSpartan-Bold;" href="index.html">BACK</a>
+    <span id="abs">Art mode: <input type="checkbox" id="box"></span>
+    <canvas id="cnv"></canvas>
+
+    <script type="text/javascript">
+        var W,H,L;
+var X,Y,vx=5,vy=5;
+const {sin, cos, PI, sqrt, random, floor} = Math;
+var i = 0;
+var m = 0.05;
+function id(n){
+    return document.getElementById(n);
+}
+
+var point = {
+    x:0,y:0,
+    randomize:function(){
+        this.x = W*random();
+        this.y = H*random();
+    },
+};
+    
+function atan(x1,y1,x2,y2){
+    let dx = x2 - x1;
+    let dy = y2 - y1;
+    if(dx==0){
+        if(dy>=0){
+            return PI/2;
+        }
+        else{
+            return (3/2)*PI;
+        }
+    }
+    else if(dx>0){
+        return Math.atan(dy/dx);
+    }
+    else{return PI+Math.atan(dy/dx);}
+}
+
+window.onload = function(){
+    var cnv = document.getElementById("cnv");
+    var ctx = cnv.getContext("2d");
+    function init(){
+        W = window.innerWidth;
+        H = window.innerHeight;
+        cnv.width = W;
+        cnv.height = H;
+        L=W<H?W*0.5:H*0.5;
+        X = W/2;Y = H/2;
+        point.randomize();
+    }
+    init();
+    window.onresize = function(){
+        ctx.translate(-X,-Y);
+        init();
+        ctx.translate(X,Y);
+    };
+    
+    var a = PI/180;
+    ctx.translate(X,Y);
+    function animate(){
+        ctx.fillStyle = "rgba(0,0,0,"+m+")";
+        ctx.fillRect(-W,-H,W*2,H*2);
+        ctx.rotate(a);
+        
+        ctx.fillStyle=`hsl(${i}deg,100%,50%)`;
+        //ctx.fillStyle="silver";
+        ctx.fillRect(0,0,3*sin(a),L*cos(a));
+        ctx.rotate(-a);
+        a+=PI/180;
+        
+        ctx.translate(-X,-Y);
+        /*vx *= random();
+        vy *= random();
+        
+        vy++;*/
+        
+        let ang = atan(X,Y,point.x,point.y);
+        vx = 2*cos(ang);
+        vy = 2*sin(ang);
+        X+=vx;
+        Y+=vy;
+        
+        if(X>W){X=W;vx=-vx;}
+        if(X<0){X=0;vx=-vx;}
+        if(Y>H){Y=H;vy=-vy;}
+        if(Y<0){Y=0;vy=-vy;}
+        if(Math.sqrt((point.x-X)*2 + (point.y-Y)*2)<=10){
+            point.randomize();
+        }
+        ctx.translate(X,Y);
+        i++;
+        
+        window.requestAnimationFrame(animate);
+    }
+    
+    animate();
+    
+    function move(e){
+        ctx.translate(-X,-Y);
+        X = e.clientX;
+        Y = e.clientY;
+        if(!X){
+            X = e.touches[0].clientX;
+            Y = e.touches[0].clientY;
+        }
+        ctx.translate(X,Y);
+    }
+    cnv.addEventListener("touchstart",move);
+    cnv.addEventListener("touchmove",move);
+    cnv.addEventListener("mousemove",move);
+     id("abs").addEventListener("click",function(){
+        let box = id("box");
+        if(box.checked){
+            m = 0.05;
+            box.checked = false;
+        }else{
+            m = 0.01;
+            box.checked = true;
+        }
+    });
+}
+    </script>
+</body>
+</html>

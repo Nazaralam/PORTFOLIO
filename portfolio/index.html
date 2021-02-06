@@ -1,0 +1,715 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg==" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+    <title>PORTFOLIO NAZAR ALAM</title>
+    <style>
+        @font-face {
+            font-family: True Lies;
+            src: url(/font/True\ Lies.ttf);
+        }
+
+        @font-face {
+            font-family: MADE Sunflower PERSONAL USE;
+            src: url(/font/MADE\ Sunflower\ PERSONAL\ USE.otf);
+        }
+
+        @font-face {
+            font-family: GR NORCH;
+            src: url(/font/GR\ NORCH.ttf);
+        }
+
+        @font-face {
+            font-family: Cocogoose Pro Italic-trial;
+            src: url(font/Cocogoose\ Pro\ Italic-trial.ttf);
+        }
+
+        @font-face {
+            font-family: ArgentumSans-ExtraLight;
+            src: url(font/ArgentumSans-ExtraLight.ttf);
+        }
+
+        @font-face {
+            font-family: LeagueSpartan-Bold;
+            src: url(font/LeagueSpartan-Bold.otf);
+        }
+
+        @font-face {
+            font-family: BebasKai;
+            src: url(font/BebasKai.ttf);
+        }
+        .overlay {
+            content: "";
+            position: absolute;
+            width: 100%;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0,0,0,.5);
+        }
+        .openingNama{
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+            text-align: center;
+            color: white;
+        }
+        .openingNama h3{
+            font-family: 'ArgentumSans-ExtraLight';
+        }
+
+        .openingNama h1{
+            font-family: 'LeagueSpartan-Bold';
+        }
+
+        .openingNama h8{
+            font-family: 'BebasKai';
+        }
+        .home{
+            background-image: url('/image/backgroundd.jpg') ;
+            background-repeat: no-repeat;
+            background-attachment: fixed; 
+            background-size: cover;
+            height: 100vh;
+        }
+        .section2{
+            background-color:rgb(34, 34, 34);
+            height: 100vh;
+            color: white;
+            margin: 0 auto;
+        }
+        .section3{
+            background-color:rgb(39, 39, 39);
+            height: 100vh;
+            color: white;
+        }
+
+        .section4{
+            background-color:rgb(34, 34, 34);
+            height: 140vh;
+            color: white;
+        }
+
+        .section5{
+            background-color:rgb(39, 39, 39);
+            height: 140vh;
+            color: white;
+        }        
+
+        .allBox{
+            width:100%;
+            height: 70vh;
+            padding: 0 20%;
+        }
+
+
+        .boxed{
+            width: 45%;
+            height: 50%;
+            border: solid  #007bd1 7px;
+            background-color: #003d7d ;
+            text-align: center;
+        }
+
+        .right {
+            float: right
+        }
+
+        .left {
+            float: left;
+        }
+
+        .padL{
+            padding-left: 2%;
+        }
+
+        .center-box{
+        padding-top: 10px;
+        padding-bottom: 60px;
+        max-width: 80%;
+        height: auto;
+        margin: auto;
+        }
+
+        .center{ 
+        margin: auto;
+        position: relative;
+        display: table;
+        }
+
+        .center2{ 
+            margin-top: 5%;
+        }
+
+        .center p{
+            display: inline-block;
+        }
+
+        .center3{ 
+        text-align: center;
+        padding-top: 20px;
+        justify-content: space-around;
+        padding-left: 15px;
+        }
+      
+        .resume1{
+            margin-top: 10%;
+            text-align:left;
+            padding-left: 20%;
+        }
+
+        .resume2{
+            margin-top: 10%;
+            text-align:left;
+            padding-right: 20%;
+        }
+        .profile{
+            padding-top: 5%;
+            padding-left: 5%;
+        }
+
+
+        .boxResume{
+            width: 400px;
+            height: 200px;
+            border: solid #007bd1 5px;
+            background-color: #003d7d;
+            border-radius: 10px;
+        }
+
+        .center-box2{
+        padding-top: 10px;
+        padding-bottom: 80px;
+        max-width: 100%;
+        height: auto;
+        margin: auto;
+        }
+
+        .biograph{
+            font-size: 18px;
+        }
+
+        .buttonR{
+            float: right;
+            size: 90px;
+            margin-right: 20%;
+        }
+
+        .buttonL{
+            margin-left: 90px;
+            position: relative;
+            background-color: black;
+            width: 170px;
+            padding: 15px;
+            font-size: 15px;
+            color: #6acef1;
+            font-family: BebasKai;
+            font-weight: 50;
+            border: 5px solid #6acef1 ;
+            text-transform: uppercase;
+            letter-spacing: 10px;
+            cursor: pointer;
+            border-radius: 80px;
+            transition: 0.5s;
+        }
+
+        .buttonL:hover{
+            box-shadow: 0 5px 50px 0 #6acef1 inset, 0 5px 50px 0 #6acef1,
+            0 5px 50px 0 #6acef1 inset, 0 5px 50px 0 #6acef1;
+            transition: 0.2s;
+            font-size: 25px;
+            
+        }
+
+        .buttonR{
+            margin-right: 100px;
+            position: relative;
+            background-color: #000000;
+            width: 170px;
+            padding: 15px;
+            font-size: 15px;
+            color:#ff8300;
+            font-family: BebasKai;
+            font-weight: 50;
+            border: 5px solid #ff8300 ;
+            text-transform: uppercase;
+            letter-spacing: 10px;
+            cursor: pointer;
+            border-radius: 80px;
+            transition: 0.5s;
+        }
+
+        .buttonR:hover{
+            box-shadow: 0 5px 50px 0 #ff8300 inset, 0 5px 50px 0 #ff8300,
+            0 5px 50px 0 #ff8300 inset, 0 5px 50px 0 #ff8300;
+            transition: 0.2s;
+            font-size: 25px;
+        }
+
+        .button3{
+            padding: 15px;
+            position: relative;
+            background-color: black;
+            width: 120px;
+            font-size: 10px;
+            color:#ff8300;
+            font-family: Bebaskai;
+            font-weight: 10;
+            border: 3px solid #ff8300 ;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            cursor: pointer;
+            border-radius: 80px;
+            transition: 0.5s;
+        
+        }
+
+        .button3:hover{
+            box-shadow: 0 5px 50px 0 #ff8300 inset, 0 5px 50px 0 #ff8300,
+            0 5px 50px 0 #ff8300 inset, 0 5px 50px 0 #ff8300;
+            transition: 0.2s;
+            font-size: 15px;
+        }
+
+        .contactForm{
+            padding-left: 3%;
+            padding-top: 3px;
+            width: 500px;
+            height: 60px;
+            background-color: rgb(48, 63, 145);
+            font-size: 24px;
+            font-family: LeagueSpartan-Bold;
+        }
+
+        .boxInfo{
+            width: 700px;
+            height: 500px;
+            background-color: rgb(48, 63, 145);
+            margin-left: 5%;
+            margin-top: 3%;
+            /* opacity: 30%; */
+        }
+
+        .boxInfo p{
+            padding-left: 3%;
+        }
+
+        .copyRight{
+            text-align: center;
+            font-size: 14px;
+            padding-top: 110px;
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode',Verdana, sans-serif;
+        }
+
+        .social{
+            padding-top: 100px;
+            padding-left: 20px;
+            position: relative;
+            font-size: 50px;
+            text-align: center;
+            width: 100%;
+
+        }
+
+        .social i{
+            top: 0;
+            left: -20px;
+            display: inline-block;
+            height: 80px;
+            width: 80px;
+            margin: 20px auto;
+            line-height: 80px;
+            border-radius: 50%;
+            color: #fff;
+            background-color: #1b1b1b;
+            cursor: pointer;
+            transition: all .2s ease-in-out;
+        }
+
+        .social i:hover{
+            background-color: #fff;
+            color: black;
+        }
+
+        .scrolled {
+            background-color: white;
+            transition: 0.5s;
+        }
+
+        .scrolled a {
+            color: black; 
+        }
+
+        .navbar-dark {
+            transition: 0.5s;
+        }
+
+        .navbar-nav a:hover {
+            transition: 0.2s;
+            color: rgb(157, 223, 223) !important;
+            font-size: 60px;
+        }
+
+        .navbar-nav a {
+            transition: 0.2s;
+        }
+
+        .up{
+            position:absolute;
+            right: 100px;
+            font-size: 50px;
+            color: black !important;
+            transition: 0.2s;
+        }
+
+        .up i{
+            color:white !important;
+        }
+
+        .up:hover{
+            transition: 0.2s;
+            font-size: 60px;
+        }
+
+        .partFoto{
+            padding-left: 370px;
+            font-size: 90px;
+            padding-top: 100px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            width: 80%;
+            transition: 0.2s;
+        }
+
+        .partFoto i:hover{
+            transition: 0.5s;
+            transform: scale(1.1);
+            cursor: pointer;
+        }
+
+        .downn{
+            padding-left: 770px;
+            font-size: 50px;
+            padding-top: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            width: 80%;
+            transition: 0.2s;
+        }
+
+        .downn i:hover{
+            transition: 0.5s;
+            transform: scale(1.5);
+            cursor: pointer;
+        }
+
+
+
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg fixed-top navbar-dark">
+        <a class="navbar-brand" href="https://drive.google.com/drive/folders/1nA5au8L0o6QydVcg0bO962VD_ZZwT9SR?usp=sharing" target="_blank">PORTFOLIO</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+            <div style='margin: auto; font-size: 30px;' class="navbar-nav">
+                <a class="nav-item nav-link active" href="#" id="firstButton">HOME<span class="sr-only">(current)</span></a>
+                <a class="nav-item nav-link" href="#" id='workButton'>MY WORKS</a>
+                <a class="nav-item nav-link" href="#" id="resButton">RESUME</a>
+                <a class="nav-item nav-link" href="#" id="aboutButton">ABOUT</a>
+                <a class="nav-item nav-link" href="#" id="contactButton">CONTACT</a>
+            </div>
+        </div>
+    </nav>
+    
+    <section class="banner"></section>
+    <script type="text/javascript">
+        window.addEventListener("scroll", function(){
+             var home = document.getElementsByClassName("home")[0];
+             $(window).scroll(function(){
+                $('nav').toggleClass('navbar-dark', $(this).scrollTop() < home.clientHeight - 80);
+                $('nav').toggleClass('scrolled', $(this).scrollTop() > home.clientHeight - 80);
+            });
+        } )
+        $("#firstButton").click(function() {
+            $([document.documentElement, document.body]).animate({
+                scrollTop: $("#first").offset().top
+            }, 500);
+        });
+        $("#workButton").click(function() {
+            $([document.documentElement, document.body]).animate({
+                scrollTop: $("#work").offset().top
+            }, 500);
+        });
+        $("#resButton").click(function() {
+            $([document.documentElement, document.body]).animate({
+                scrollTop: $("#res").offset().top
+            }, 500);
+        });
+        $("#aboutButton").click(function() {
+            $([document.documentElement, document.body]).animate({
+                scrollTop: $("#about").offset().top
+            }, 500);
+        });
+        $("#contactButton").click(function() {
+            $([document.documentElement, document.body]).animate({
+                scrollTop: $("#contact").offset().top
+            }, 500);
+        });
+    </script>
+    
+    <div class="home" id="first">
+        <div class="overlay">
+    
+        </div>
+        <div class="openingNama">
+            <h3>
+                HELLO, I'M
+            </h3>
+            <br>
+            <H1>
+                Muhammad Nazar Alam
+            </H1>
+            <br>
+            <h8>
+                AND THIS IS MY RESUME
+            </h8>
+        </div>
+          
+    </div>
+
+    <div class="section2" id='work'>
+        
+        <div class='center-box'>
+           <div class='center'>
+                <p style="font-size:30px; font-family:ArgentumSans-ExtraLight;">MY</p>
+                <p style="font-size:30px; font-family:LeagueSpartan-Bold;">WORKS</p>
+           </div>
+        </div>
+         
+         <div class='center-box'>
+            <div class='center allBox'>
+
+                <div class="boxed left">
+                    <p style="margin-top: 20px; font-family: Cocogoose Pro Italic-trial; font-size: 50px;">PANDA</p>
+                    <br> <p style="font-size: 15px; padding: 9px;"> An animation of Panda Bear that created using HTML & CSS</p> 
+                    <br>
+                        <a href="panda.html"><button class="button3"> Click It!</button></a>
+                </div>
+                
+                <div class="boxed right">
+                    <p style="margin-top: 40px; font-family: True Lies; font-size: 35px; color: #e93e3e;">R</p>
+                    <p style="margin-top: 40px; font-family: True Lies; font-size: 35px; color: #5cf273;">G</p>
+                    <p style="margin-top: 40px; font-family: True Lies; font-size: 35px; color: #475cff;">B</p>
+                    <p style="margin-top: 40px; font-family: True Lies; font-size: 35px; color: #fdfe02;"> LIGHTSABER</p>
+                    <br> <p style="font-size: 15px; padding: 3px;">An a MINIGAME using pointer that display light line with RGB. Create using CSS, HTML &JAVASCRIPT</p>
+                    <br>
+                        <a href="lightSaber.html"><button class="button3"> Click It!</button></a>
+                </div>
+
+
+
+                <div class="boxed left center2">
+                    <p style="margin-top: 20px; font-family: GR NORCH; font-size: 60px; color: #c13232;">SNAKE GAMES</p>
+                    <br> <p style="font-size: 15px; padding: 3px;">A MINIGAME "SNAKE" cretaed using HTML, CSS & JAVASCRIPT</p>
+                    <br>
+                    <a href="/snake.html" ><button class="button3"> Click It!</button></a>
+                </div>
+
+                <div class="boxed right center2">
+                    <p style="margin: 10px; font-family: MADE Sunflower PERSONAL USE; font-size: 37px; color: #f48a8a;">DOTTED COLOR</p>
+                    <br>
+                    <p>An dot animation uisng CSS & JAVASCRIPT.</p>
+                    <a href="Dot Color.html"><button class="button3"> Click It!</button></a>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="section3" id="res">
+            <div style="padding-top: 2%; font-size: 30px;left: 45%;position: absolute;">
+                <p style="padding-left: 20px; font-size: 28px; font-family:LeagueSpartan-Bold;">RESUME</p>
+            </div>
+
+           
+                <div class="containerResume">
+                    <div class="resume1 left">
+                        <p style="font-size:30px; font-family:ArgentumSans-ExtraLight;">Education</p>
+                    </div>
+
+                    <div class="resume2 right">
+                    <p style="font-size:30px; font-family:ArgentumSans-ExtraLight; padding-right: 235px;">Experience</p>
+                    </div>
+                </div>
+
+                <div class='center-box2'>
+                    <div class='center allBox'>
+        
+                        <div class="boxResume left padL">
+                            <p style="margin-top: 10px;font-family:ArgentumSans-ExtraLight"><i class="fas fa-calendar-alt"></i> 2015 - 2018</p>
+                            <br>
+                            <p style="color: #6acef1;font-family: LeagueSpartan-Bold;font-size: 25px;">SMAN 70 JAKARTA</p>
+                            <br>
+                            <p style="margin-top: 14px; font-family:ArgentumSans-ExtraLight">Science Stream</p>
+                        </div>
+                        
+                        <div class="boxResume right padL">
+                            <p style="margin-top: 10px; font-family:ArgentumSans-ExtraLight"><i class="fas fa-calendar-alt"></i> 2019 - Present</p>
+                            <br>
+                            <p style="color: #6acef1;font-family: LeagueSpartan-Bold;font-size: 25px;">Freelance Photographer</p>
+                            <br>
+                            <p style="margin-top: 14px; font-family:ArgentumSans-ExtraLight">As a Wedding Photographer, Videographer,
+                                <br> Editor and Fnb Photographer.</p>
+                        </div>
+        
+                        <div class="boxResume left center2 padL">
+                            <p style="margin-top: 10px; font-family:ArgentumSans-ExtraLight"><i class="fas fa-calendar-alt"></i> 2018 - Present</p>
+                            <br>
+                            <p style="color: #6acef1;font-family: LeagueSpartan-Bold;font-size: 25px;">President University</p>
+                            <br>
+                            <p style="margin-top: 14px; font-family:ArgentumSans-ExtraLight">Computer Science/Information Technology</p>
+                        </div>
+        
+                        <div class="boxResume right center2 padL">
+                            <p style="margin-top: 10px; font-family:ArgentumSans-ExtraLight"><i class="fas fa-calendar-alt"></i> 2019 - Present</p>
+                            <br>
+                            <p style="color: #6acef1;font-family: LeagueSpartan-Bold;font-size: 23px;">BOOST BUAH by Putra Asih</p>
+                            <br>
+                            <p style="margin-top: 14px; font-family:ArgentumSans-ExtraLight">As a Content Creator who to produce a 
+                                <br>content for the social media of this company 
+                                <br>as photo, graphic design and video.</p>
+                        </div>
+                    </div>
+                </div>
+     
+    </div>
+
+    <div class="section4" id="about">
+        <div class='center-box'>
+            <div class='center'>
+                 <p style="font-size:30px; font-family:ArgentumSans-ExtraLight;">ABOUT</p>
+                 <p style="font-size:30px; font-family:LeagueSpartan-Bold;">ME</p>
+            </div>
+          </div>
+
+          <div class="mainProfile"></div>
+            <div style="float: left;" class="profile">
+                <input type="image" src="/image/profileWeb.jpg" width="550px" height="400px">
+            </div>
+
+            <div style="float: right; padding-right: 10%; padding-top: 5%;" class="biograph">
+                <p>My name is Muhammad Nazar Alam An Ungraduate Student Computer science 
+                <br>with skill set and interest in FrontEnd and BackEnd Development. 
+                <br>I am a self-motivated and hardworking individual or with group
+                <br> who always strives to achieve the best result at any given task or situation 
+                <br>by using both logical thinking and creative design skills especially 
+                <br>in Photoshop, Premiere, Illustrator and After Effect.</p>
+                <br>
+                <p>Now i am looking forward to take on the next challenge in IT sector. I believe 
+                <br>that my passion to learn new things will be very valuable in my upcoming journey as 
+                <br> I want to become a part of the IT community and work for the betterment of society.</p>
+                <br>
+                <button class="buttonL" id="contact2" >CONTACT</button>
+                <a href="/file/alam.pdf" target="_blank" style="color: #6acef1;"><button class="buttonR"> CV</button></a>
+                
+                <script>
+                    $("#contact2").click(function() {
+                        $([document.documentElement, document.body]).animate({
+                            scrollTop: $("#contact").offset().top
+                        }, 500);
+                    });
+                </script>
+            </div>
+
+                    <div class='center3'>
+                         <p style="font-size:20px; font-family:LeagueSpartan-Bold;padding-top: 600px;">My Skills</p>
+                    </div>
+
+            <div class="partFoto">
+                <i class="fab fa-html5" aria-hidden="true"></i>
+                <i class="fab fa-css3-alt" aria-hidden="true"></i>
+                <i class="fab fa-js" aria-hidden="true"></i>
+                <i class="fab fa-php" aria-hidden="true"></i>
+            </div>
+
+
+    </div>
+
+    <div class="section5" id="contact">
+        <div class='center-box'>
+            <div class='center'>
+                 <p style="padding-left: 30px; font-size:30px; font-family:ArgentumSans-ExtraLight;">GET</p>
+                 <p style="font-size:30px; font-family:LeagueSpartan-Bold;">IN TOUCH</p>
+            </div>
+          </div>
+
+        <div class="contactForm">
+            <p style="opacity: 70%;">DO YOU LIKE WHAT YOU SEE? CONTACT ME</p>
+        </div>
+
+        <div class="sampleFoto right" style="padding-top: 50px;">
+            <input type="image" src="/image/backgroundd.jpg" width="700px" height="500px" style="opacity: 50%;">
+        </div>
+
+        <div class="boxInfo">
+            <div class="subbox">
+                <p style="padding-top: 5%; font-size: 30px; color: #dab420;font-family: BebasKai;">MY EMAIL</p>
+                <p style="font-size: 23px; color: #6acef1;">nazaralam79@gmail.com</p>
+                <br>
+                <p style="font-size: 30px; color: #dab420;font-family: BebasKai;">PHONE</p>
+                <p style="font-size: 23px; color: #6acef1;">+62 81517614380</p>
+                <br>
+                <p style="font-size: 30px; color: #dab420;font-family: BebasKai;">ADDRESS</p>
+                <p style="font-size: 23px; color: #6acef1;">JL. Bijaksana No. 30 RT.10/RW.02, Cinere, 
+                <br>Kota Depok, Jawa Barat, Indonesia,
+                <br>16512</p>
+            </div>
+        </div>
+
+        <div class="downn">
+            <i class="fas fa-angle-double-down" aria-hidden="true"></i>
+        </div>
+
+
+        <div class="social">
+            <a href="https://www.linkedin.com/in/nazar-alam-8abb20112/" target="_blank"> <i class="fab fa-linkedin"></i></a>
+           <a href="https://www.instagram.com/nzrrl_/" target="_blank"><i style="padding: 5px;"  class="fab fa-instagram"></i> </a>
+           <a href="https://github.com/Nazaralam" target="_blank"><i style="padding: 5px;"  class="fab fa-github"></i></a>
+        </div>
+
+        <div class="up">
+            <a href="#" id="naik">
+                <i class="fas fa-arrow-up"></i>
+            </a>
+        </div>
+        <script>
+
+        $("#naik").click(function() {
+            $([document.documentElement, document.body]).animate({
+                scrollTop: $("#first").offset().top
+            }, 500);
+        });
+        </script>
+
+        <div class="copyRight">
+           <p>Copyright © 2021 All rights reserved | PORTFOLIO BY Muhammad Nazar Alam</p>
+        </div>
+        
+
+
+
+    </div>
+    
+</body>
+</html>
